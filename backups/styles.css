@@ -1,0 +1,344 @@
+:root {
+    --myblack: #121212;
+    --mygrey: #242424;
+}
+
+/* reset default styles*/
+body,
+p,
+a,
+ul,
+li,
+h2,
+h1 {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* base styles */
+body {
+    color: white;
+    background: black;
+    /* overflow-x: hidden; */
+}
+
+@font-face {
+    font-family: "CircularSp";
+    src: url("assets/fonts/CircularSp.woff2");
+}
+
+@font-face {
+    font-family: "CircularSp-bold";
+    src: url("assets/fonts/CircularSp-Bold.woff2");
+}
+
+@font-face {
+    font-family: "CircularSp Title-bold";
+    src: url("assets/fonts/CircularSpTitle-Bold.woff2");
+}
+
+* {
+    font-family: "CircularSp" !important;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    filter: invert(1);
+}
+
+/* base styles end  */
+
+/* ......................................................................................  */
+
+.main-div {
+    z-index: 0;
+}
+
+/* main division left  */
+.main-div-left {
+    background-color: black;
+    height: 92vh;
+    width: 420px;
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    padding: 8px 8px 0 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.main-div-left>div {
+    background-color: var(--myblack);
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* menu section  */
+.menu {
+    height: 15.6vh;
+}
+
+.menu>div {
+    padding: 10px 0 0px 0;
+}
+
+.menu>div>div {
+    display: flex;
+    flex-flow: row;
+    column-gap: 20px;
+    align-items: center;
+    padding: 10px 24px;
+}
+
+.menu>div>div>p {
+    font-family: "CircularSp-bold" !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.menu-icons {
+    height: 24px;
+    width: 24px;
+}
+
+.search {
+    margin-top: 4px;
+    color: #b3b3b3;
+}
+
+.search>.menu-icons{
+    filter: invert(0.7);
+}
+
+/* library section  */
+.library {
+    height: 74.4vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.library-top{
+    display: flex;
+    flex-flow: column;
+    padding: 8px;
+    gap: 15px;
+}
+
+.library-flex{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding: 9px 16px;
+    justify-content: space-between;
+}
+
+.library-flex>div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.library-flex img{
+    filter: invert(0.65);
+}
+
+.library-flex>div>p{
+    font-family: "CircularSp-bold" !important;
+    font-size: 16px;
+    font-weight: 500;
+    color: #9e9e9e;
+    /* margin-right: 217.5px; */
+}
+
+.menu-icons.plus{
+    height: 16px;
+    width: 16px;
+}
+
+.library-container{
+    background-color: var(--mygrey);
+    border-radius: 8px;
+    margin-bottom: 9px;
+    padding: 16px 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+.library-container>h1{
+    font-family: "CircularSp-bold" !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.library-container>p{
+    color: #f9f9f9;
+}
+
+.library-container>div{
+    background-color: #fff;
+    width: fit-content;
+    color: #000;
+    font-family: "CircularSp-bold" !important;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-top: 12px;
+}
+
+.library-container>div:hover{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.library-bottom{
+    display: flex;
+    flex-flow: column;
+    padding: 30px 24px;
+    padding-right: 50px;
+}
+
+.library-bottom ul{
+    display: flex;
+    column-gap: 15px;
+    flex-wrap: wrap;
+}
+
+.library-bottom>ul li,.library-bottom>p{
+    font-family: "CircularSp" !important;
+    font-size: 11px;
+    font-weight: 500;
+    color: #9f9f9f;
+    margin-top: 14px;
+}
+
+.lang-button{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: fit-content;
+    border: 1px solid #727272;
+    border-radius: 20px;
+    padding: 3px 15px 3px 12px;
+    margin-top: 32px;
+}
+
+.lang-button>p{
+    font-family: "CircularSp-bold" !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu-icons.web{
+    width: 16px;
+}
+
+
+
+
+
+/* main division right  */
+.main-div-right {
+    background-color: var(--myblack);
+    border-radius: 8px;
+    height: 91vh;
+    margin: 8px 8px 0 0;
+    position: fixed;
+    top: 0;
+    left: 436px;
+    right: 0;
+    overflow-y: auto;
+}
+
+
+/* fixed banner start  */
+.fixed-banner {
+    background-image: linear-gradient(90deg, #af2896, #509bf5);
+    color: white;
+    height: 46px;
+    padding: 11px 10px 9px 10px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    z-index: 10;
+}
+
+.fixed-banner-title {
+    font-family: "CircularSp-bold" !important;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 1px;
+}
+
+.fixed-banner-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.button-big {
+    background-color: white;
+    color: black;
+    font-family: "CircularSp-bold" !important;
+    font-size: 16px;
+    font-weight: 300;
+    width: fit-content;
+    height: fit-content;
+    padding: 13px 32px;
+    border-radius: 25px;
+    margin-right: 14px;
+}
+
+.fixed-banner-bg {
+    background-color: black;
+    height: 82px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9;
+}
+
+/* fixed banner end  */
+
+
+
+
+
+
+/* responsive design  */
+
+
+
+
+
+
+
+
+
+
+
+.sample {
+    height: 800px;
+    background-color: lightblue;
+    margin-bottom: 10px;
+}
